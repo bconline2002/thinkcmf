@@ -9,3 +9,6 @@
 /node_modules
 Vagrantfile
 .vagrant
+
+/public/qfxandxdh/node_modules
+/public/smhandxdh/node_modules
