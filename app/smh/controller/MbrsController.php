@@ -13,7 +13,7 @@ namespace app\smh\controller;
 use think\facade\Config;
 
 
-class IndexController extends SmhBaseController
+class MbrsController extends SmhBaseController
 {
     public function index()
     {
@@ -29,5 +29,13 @@ class IndexController extends SmhBaseController
     {
        // return $this->fetch(':ws');
         echo dirname(__DIR__);
+    }
+
+    
+
+    public function mbrCartList()
+    {
+        $ret["code"] = 1;
+        JR($ret);
     }
 }

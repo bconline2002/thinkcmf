@@ -13,21 +13,33 @@ namespace app\smh\controller;
 use think\facade\Config;
 
 
-class IndexController extends SmhBaseController
+class AuthController extends SmhBaseController
 {
-    public function index()
-    {
-       // return $this->fetch(':index');
-       
-       requireFunc("function.php"); 
+   public function tokenLogin()
+   {
 
-       echo "smh";
-      
-    }
+        
 
-    public function ws()
-    {
-       // return $this->fetch(':ws');
-        echo dirname(__DIR__);
-    }
+
+        $ret["code"] = 1;
+        $ret["userInfo"]=array();    
+        JR($ret);
+
+   }
+
+
+   public function userLogin()
+   {
+       $hdrs = getallheaders();
+      /// var_dump($hdrs); 
+
+        $ret["code"] = 1;    
+
+        JR($ret);
+   }
+
+   public function phoneLogin()
+   {
+
+   }
 }

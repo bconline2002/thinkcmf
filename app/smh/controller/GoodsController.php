@@ -13,15 +13,20 @@ namespace app\smh\controller;
 use think\facade\Config;
 
 
-class IndexController extends SmhBaseController
+class GoodsController extends SmhBaseController
 {
     public function index()
     {
        // return $this->fetch(':index');
        
-       requireFunc("function.php"); 
+    //    requireFunc("function.php"); 
 
-       echo "smh";
+    //    echo "smh";
+
+        $ret["code"] = 1;
+
+        //$this->ajaxReturn($ret);
+        JR($ret);
       
     }
 
@@ -29,5 +34,18 @@ class IndexController extends SmhBaseController
     {
        // return $this->fetch(':ws');
         echo dirname(__DIR__);
+    }
+
+    public function userInfo()
+    {
+        echo "OOO";
+    }
+
+    public function navList()
+    {
+        $ret["code"] = 1;
+
+        //$this->ajaxReturn($ret);
+        JR($ret);
     }
 }

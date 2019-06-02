@@ -9,17 +9,25 @@
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
 
-namespace app\demo\controller;
-
-use cmf\controller\HomeBaseController;
+namespace app\smh\controller;
 use think\facade\Config;
 
-class DemoBaseController extends HomeBaseController
+
+class IndexController extends SmhBaseController
 {
-    protected function initialize()
+    public function index()
     {
-             
-        parent::initialize();
+       // return $this->fetch(':index');
+       
+       requireFunc("function.php"); 
+
+       echo "smh";
       
+    }
+
+    public function ws()
+    {
+       // return $this->fetch(':ws');
+        echo dirname(__DIR__);
     }
 }

@@ -10,24 +10,16 @@
 // +----------------------------------------------------------------------
 
 namespace app\smh\controller;
+
+use cmf\controller\RestBaseController;
 use think\facade\Config;
 
-
-class IndexController extends SmhBaseController
+class SmhBaseController extends RestBaseController
 {
-    public function index()
+    protected function initialize()
     {
-       // return $this->fetch(':index');
-       
-       requireFunc("function.php"); 
-
-       echo "smh";
+             
+        parent::initialize();
       
-    }
-
-    public function ws()
-    {
-       // return $this->fetch(':ws');
-        echo dirname(__DIR__);
     }
 }
